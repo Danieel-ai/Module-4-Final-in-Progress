@@ -1,3 +1,5 @@
+/* NAVIGATION */
+
 @media screen and (max-height: 1200px) {
   .navbar[data-v-2a11e7ca] {
      height: 100px;
@@ -82,7 +84,7 @@ NAVIGATION
 }
 
 li {
-  list-style-type: none;  
+   list-style-type: none;
 }
 
 .link__hover-effect {
@@ -123,12 +125,23 @@ audio, canvas, embed, iframe, img, object, video {
 
 img {
    overflow-clip-margin: content-box;
-   overflow: clip; 
+   overflow: clip;
+
 }
 
 .navbar {
    font-size: 18px;
    font-weight: 600; 
+}
+
+.dark-theme .title,
+.dark-theme .section__title,
+.dark-theme .section__sub-title,
+.dark-theme .nav__link--anchor,
+.dark-theme .fa-adjust,
+.dark-theme .title__para
+{
+   color: white;
 }
 
 .md-body-1, .md-body-2, body {
@@ -164,7 +177,7 @@ html.md-theme-default {
 
 div.content-wrapper.flex-col.align-center.justify-between {
    width: 655.33px;
-   height: 758px;
+   height: 458px;
 }
 
 
@@ -531,6 +544,11 @@ element.style {
     flex-wrap: wrap;
 }
 
+.black-txt[data-v-66aecfa2] {
+    color: #0a1f44;
+    display: inline-block;
+}
+
 .logo[data-v-390ceb07]:hover {
     filter: none;
 }
@@ -651,6 +669,8 @@ input[data-v-390ceb07] {
     flex-direction: column;
 }
 
+
+
 #filter[data-v-66aecfa2] {
     padding: 0 20px;
 }
@@ -686,7 +706,7 @@ div.content-wrapper.flex-col.align-center {
 }
 
 div.overlay {
-   width: 737.33px;
+   width: 237.33px;
    height: 326px;
 }
 
@@ -715,6 +735,59 @@ path {
    width: 32px;
    height: 32px;
 }
+
+.movies__loading {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding-top: 60px;
+   font-size: 60px;
+   color: #6030b1;
+}
+
+.movies__loading--spinner {
+  display: none !important; 
+}
+.movies__loading .movies__loading--spinner {
+  display: block; 
+}
+
+.fas.fa-spinner {
+   width: 32px;
+   height: 32px;
+   color: #6030b1;
+   animation: rotate 600ms infinite linear;
+}
+
+@keyframes rotate {
+   0% {
+      transform: rotate(0);
+   }
+
+   100% {
+      transform: rotate(300deg);
+   }
+}
+
+.movie_img {
+  width: 30%;
+  width: 120px;
+  height: 160px;
+  padding: 24px; 
+}
+
+.movie__title {
+  padding: 24px;
+  width: 120px;
+}
+
+.movie_image--wrapper {
+  flex: column;
+  align-items: center;
+  justify-content: space-between; 
+}
+
+
 
 
 

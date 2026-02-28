@@ -1,69 +1,34 @@
-// API 1: "http://www.omdbapi.com/?i=tt3896198&apikey=73bc5c8d"
-
-async function main() {
-  console.log((await fetch("http://www.omdbapi.com/?i=tt3896198&apikey=73bc5c8d")).json());
-}
-
-main();
-
-const postListEl = document.querySelector('.post-list');
-const id = localStorage.getItem("id")
-
-async function onSearchChange(event) {
-  const id = event.target.value;
-  renderPosts(id);  
-}
-
-async function renderPosts(id) {
-  const posts = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=73bc5c8d`)
-  const postsData = await posts.json();
-  postListEl.innerHTML = postsData.map(post => postHTML(post)).join('');
-}
-
-function postHTML(post) {
-  return `
-    <div class="post">
-        <div class="post__title">
-            ${post.title}
-        </div>
-        <p class="post__body">
-            ${post.body}
-        </p>
-    </div>
-  `  
-}
-
-renderPosts(id);
-
-
 function renderMovies() {
-  const moviesWrapper = document.querySelector('.movies');
+  console.log('renderMovies')
+  //const moviesWrapper = document.querySelector(".movies");
 
-  const movies = getMovies();
+  //const movies = getMovies();
 
-  const movieshtml = movies.map((movie) => {
-    return `<div class="movie">
-      <figure class="movie__img--wrapper">
-        <img class="movie__img" src="${movies.url}" alt="">
-      </figure>
-      <div class="movie__title">
-        The Fast and the Furious
-      </div>
-    </div>`
-      }) 
-      .join("");
-
-console.log(moviesHtml)
-//  moviesWrapper.innerHTML = ;
+  //movies.map(movie => {
+    //return <div class="movie">
+      //<figure class="movie__img--wrapper">
+        //<img class="movie__img" src="${movie[0].url}" alt=""></img>
+      //</figure>
+      //<div class="movie__title">
+        //${movies[0].title}
+      //</div>  
+    //</div>
+    
+  //})
+  // moviesWrapper.innerHTML = ;
 }
+
+renderMovies();
 
 setTimeout(() => {
   renderMovies();
 });
-//FAKE DATA
+// FAKE DATA
 function getMovies() {
   return [
-{
+    {
+  "Search": [
+    {
       "Title": "The Fast and the Furious",
       "Year": "2001",
       "imdbID": "tt0232500",
@@ -84,5 +49,30 @@ function getMovies() {
       "Type": "movie",
       "Poster": "https://m.media-amazon.com/images/M/MV5BMTUxNTk5MTE0OF5BMl5BanBnXkFtZTcwMjA2NzY3NA@@._V1_SX300.jpg"
     },
-    ]
+    {
+      "Title": "Fast & Furious",
+      "Year": "2009",
+      "imdbID": "tt1013752",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BM2Y1YzhkNzUtMzhmZC00OTFkLWJjZDktMWYzZmQ0Y2Y5ODcwXkEyXkFqcGc@._V1_SX300.jpg"
+    },
+    {
+      "Title": "The Fast and the Furious: Tokyo Drift",
+      "Year": "2006",
+      "imdbID": "tt0463985",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTQ2NTMxODEyNV5BMl5BanBnXkFtZTcwMDgxMjA0MQ@@._V1_SX300.jpg"
+    },
+    {
+      "Title": "2 Fast 2 Furious",
+      "Year": "2003",
+      "imdbID": "tt0322259",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BOTQzYzEwNWMtOTAwYy00YWYwLWE1NTEtZTkxOGQxZTM0M2VhXkEyXkFqcGc@._V1_SX300.jpg"
+    },
+  ],
+  "totalResults": "947",
+  "Response": "True"
+}
+  ]
 }
