@@ -112,7 +112,7 @@ li {
 
 }
 
-.nav__link--anchor {
+.nav__link {
   text-decoration: none;
   font-size: 16px;  
 }
@@ -129,6 +129,10 @@ img {
 
 }
 
+.movies-text {
+   display: flex;
+}
+
 .navbar {
    font-size: 18px;
    font-weight: 600; 
@@ -137,7 +141,7 @@ img {
 .dark-theme .title,
 .dark-theme .section__title,
 .dark-theme .section__sub-title,
-.dark-theme .nav__link--anchor,
+.dark-theme .nav__link,
 .dark-theme .fa-adjust,
 .dark-theme .title__para
 {

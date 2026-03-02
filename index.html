@@ -6,17 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="app.js"></script>
+    <script src="index.js"></script>
     <link rel="icon" href="/favicon.ico">
     <title>Car Subscription Platform for Dealerships | Blinker.com.au</title>
-    <link href="/css/findyourcar.604be99f.css" rel="prefetch">
-    <link href="/js/findyourcar.e6a53eeb.js" rel="prefetch">
-    <link href="/css/app.a5feeff2.css" rel="preload" as="style">
-    <link href="/css/chunk-vendors.efadcd84.css" rel="preload" as="style">
-    <link href="/js/app.f6a351ca.js" rel="preload" as="script">
-    <link href="/js/chunk-vendors.3399e4f6.js" rel="preload" as="script">
-    <link href="/css/chunk-vendors.efadcd84.css" rel="stylesheet">
-    <link href="/css/app.a5feeff2.css" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -32,6 +25,8 @@
             <div class="logo">
               <img src="blinker-icon.4f9b2663.png" alt="blinker logo" class="logo">  
             </div>
+            <span class="movies-text" style="color: rgb(96, 48, 177);">movies</span>
+            
             
               <div data-v-48b363cf id="phone-nav">
                 <div data-v-48b363cf class="bento-menu">
@@ -61,14 +56,14 @@
               <div data-v-2a11e7ca class="flex flex-col align-center" style="z-index: 10; background-color: rgb(255, 255, 255);">
                 <div data-v-0f3895f0 data-v-2a11e7ca style="width: 100%;">
                   <div data-v-0f3895f0 style="animation-duration: 1500ms; transition-duration: 1500ms; animation-delay: 300ms; transition-delay: 300ms; width: 100%;">
-                    <h1 data-v-2a11e7ca>Australia's most awarded car subscription platform</h1>
+                    <h1 data-v-2a11e7ca>Blinker Movies, America's top streaming platform</h1>
                   </div> 
                 </div>
                 <div data-v-0f3895f0 data-v-2a11e7ca style="width: 100%;">
                   <div data-v-0f3895f0 style="animation-duration: 1500ms; transition-duration: 1500ms; animation-delay: 600ms; transition-delay: 600ms; width: 100%;">
                     <h2 data-v-2a11e7ca>
-                      Find your dream car with 
-                      <span data-v-2a11e7ca style="color: rgb(96, 48, 177);">Blinker</span> 
+                      Watch your favorites on 
+                      <span data-v-2a11e7ca style="color: rgb(96, 48, 177);">Blinker Movies</span> 
                     </h2>
                     
                   </div> 
@@ -76,8 +71,8 @@
                 <div data-v-0f3895f0 data-v-2a11e7ca style="width: 100%;">
                   <div data-v-0f3895f0 style="animation-duration: 1500ms; transition-duration: 1500ms; animation-delay: 1100ms; transition-delay: 1100ms; width: 100%;">
                     <div data-v-2a11e7ca class="input-wrapper">       
-                      <input data-v-2a11e7ca type="text" placeholder="Search by Model, Make or Keyword">
-                      <button data-v-2a11e7ca class="not-loading">
+                      <input data-v-2a11e7ca type="text" id="fast" placeholder="Search by Model, Make or Keyword">
+                      <button onclick="fetchData" data-v-2a11e7ca class="not-loading">
                         <svg data-v-2a11e7ca aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-search fa-w-16">
                           <path data-v-2a11e7ca="" fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" class=""></path> 
                         </svg>
@@ -92,15 +87,16 @@
             </div>
             <div data-v-2a11e7ca class="content-wrapper flex-col align-center justify-between" style="position: relative;">
               
-              <div class="movie">
+             <div class="movie_img--wrapper">
                 <figure class="movie_img--wrapper">
                   <img class="movie_img" src="https://m.media-amazon.com/images/M/MV5BZGRiMDE1NTMtMThmZS00YjE4LWI1ODQtNjRkZGZlOTg2MGE1XkEyXkFqcGc@._V1_SX300.jpg" alt="">
                 </figure>
                 <div class="movie__title">
                   The Fast and the Furious
                 </div>
-              </div>
-              <div class="movie">
+              </div>            
+                         
+              <!-- <div class="movie">
                 <figure class="movie_img--wrapper">
                   <img class="movie_img" src="https://m.media-amazon.com/images/M/MV5BOTQzYzEwNWMtOTAwYy00YWYwLWE1NTEtZTkxOGQxZTM0M2VhXkEyXkFqcGc@._V1_SX300.jpg" alt="">
                 </figure>
@@ -139,11 +135,7 @@
                 <div class="movie__title">
                   Fast & Furious 6
                 </div>
-             </div>
-            
-              
-              
-              <script src=" http://www.omdbapi.com/?i=tt3896198&apikey=73bc5c8d"></script>
+              </div>  -->
    </body>
  </html>
   
